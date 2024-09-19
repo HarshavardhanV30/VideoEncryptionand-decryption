@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Encryption & Decryption</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <h2>Video Encryption & Decryption</h2>
+            <div class="video-upload">
+                <input type="file" accept="video/*" id="videoInput">
+                <button onclick="encryptVideo()">Encrypt Video</button>
+                <button onclick="decryptVideo()">Decrypt Video</button>
+            </div>
+            <video id="videoPlayer" controls></video>
+        </div>
+    </div>
+
+    <script>
+        // Video Encryption & Decryption (Mockup)
+        function encryptVideo() {
+            const videoInput = document.getElementById('videoInput');
+            const videoPlayer = document.getElementById('videoPlayer');
+
+            if (videoInput.files.length === 0) {
+                alert("Please select a video to encrypt.");
+                return;
+            }
+
+            const file = videoInput.files[0];
+            const fileUrl = URL.createObjectURL(file);
+            videoPlayer.src = fileUrl;
+
+            // Encryption logic (mockup)
+            alert("Video encrypted successfully!");
+        }
+
+        function decryptVideo() {
+            const videoPlayer = document.getElementById('videoPlayer');
+            
+            // Decryption logic (mockup)
+            if (videoPlayer.src) {
+                alert("Video decrypted successfully!");
+            } else {
+                alert("No video to decrypt.");
+            }
+        }
+    </script>
+</body>
+</html>
